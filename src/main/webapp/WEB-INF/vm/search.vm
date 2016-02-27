@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>电影爬虫搜索结果</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="//wacai-file.b0.upaiyun.com/fe/css/dev/base.css?v=201410161" media="all">
+    <link rel="stylesheet" href="//wacai-file.b0.upaiyun.com/fe/css/dev/iAssistant.css" media="all">
+    <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+    <style type="text/css">
+        body
+        {
+            margin:0px;
+            padding:0px;
+            background-color:#E7EAEB;
+            font-family:"微软雅黑","黑体","宋体";
+            font-size:12px;
+            height:36px;
+
+        }
+        table.gridtable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+        }
+        table.gridtable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+        table.gridtable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<center>
+<table class="gridtable">
+    <tr>
+        <th>影片名称</th>
+        <th>评分</th>
+        <th>详情连接</th>
+        <th>是否放映期</th>
+        <th>是否最新</th>
+        <th>是否甲壳虫</th>
+        <th>X</th>
+        <th>Y</th>
+
+    </tr>
+    #foreach($!{movie} in $!{movieList})
+        <tr>
+            <td>$!{movie.title}</td>
+            <td>$!{movie.rate}</td>
+            <td title="$!{movie.cover}"><a href="$!{movie.url}" target="_blank"><img width="80" height="80" src="$!{movie.cover}"/></a> </td>
+            <td>$!{movie.playable}</td>
+            <td>$!{movie.new}</td>
+            <td>$!{movie.beetleSubject}</td>
+            <td>$!{movie.coverX}</td>
+            <td>$!{movie.coverY}</td>
+        </tr>
+    #end
+</table>
+</center>
+</body>
+</html>
+
