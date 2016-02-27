@@ -7,18 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>eap-web Maven Webapp</name>
     <url>http://maven.apache.org</url>
-    <distributionManagement>
-        <repository>
-            <id>deployment</id>
-            <name>挖财maven仓库</name>
-            <url>http://repo.caimi-inc.com/nexus/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>deployment</id>
-            <name>挖财maven仓库-SNAPSHOT</name>
-            <url>http://repo.caimi-inc.com/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+
 
     <organization>
         <name>企业应用开发平台</name>
